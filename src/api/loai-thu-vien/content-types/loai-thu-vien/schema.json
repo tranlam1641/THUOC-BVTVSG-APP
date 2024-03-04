@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "loai_thu_viens",
+  "info": {
+    "singularName": "loai-thu-vien",
+    "pluralName": "loai-thu-viens",
+    "displayName": "LoaiThuVien"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "thu_vien_cong_ties": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::thu-vien-cong-ty.thu-vien-cong-ty",
+      "mappedBy": "loai_thu_viens"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tin_tuc_nong_nghieps",
+  "info": {
+    "singularName": "tin-tuc-nong-nghiep",
+    "pluralName": "tin-tuc-nong-nghieps",
+    "displayName": "TinTucNongNghiep",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "text",
+      "required": true
+    },
+    "ShortDesc": {
+      "type": "richtext",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Mota": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

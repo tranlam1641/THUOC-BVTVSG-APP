@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "thu_vien_cong_ties",
+  "info": {
+    "singularName": "thu-vien-cong-ty",
+    "pluralName": "thu-vien-cong-ties",
+    "displayName": "ThuVienCongTy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "YoutubeId": {
+      "type": "string",
+      "required": true
+    },
+    "loai_thu_viens": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::loai-thu-vien.loai-thu-vien",
+      "inversedBy": "thu_vien_cong_ties"
+    }
+  }
+}

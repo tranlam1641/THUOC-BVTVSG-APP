@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tin_tuc_cong_ties",
+  "info": {
+    "singularName": "tin-tuc-cong-ty",
+    "pluralName": "tin-tuc-cong-ties",
+    "displayName": "TinTucCongTy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "text",
+      "required": true
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "ShortDesc": {
+      "type": "richtext",
+      "required": true
+    },
+    "Mota": {
+      "type": "richtext",
+      "required": true
+    },
+    "loai_tin_tucs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::loai-tin-tuc.loai-tin-tuc",
+      "inversedBy": "tin_tuc_cong_ties"
+    }
+  }
+}

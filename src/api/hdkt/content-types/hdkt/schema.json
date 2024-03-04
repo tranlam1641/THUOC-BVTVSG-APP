@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hdkts",
+  "info": {
+    "singularName": "hdkt",
+    "pluralName": "hdkts",
+    "displayName": "HDKT",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "text",
+      "required": true
+    },
+    "ImgHDKT": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Mota": {
+      "type": "richtext",
+      "required": true
+    },
+    "IsNew": {
+      "type": "boolean",
+      "required": true
+    },
+    "ShortDesc": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

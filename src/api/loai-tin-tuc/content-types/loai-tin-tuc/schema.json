@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "loai_tin_tucs",
+  "info": {
+    "singularName": "loai-tin-tuc",
+    "pluralName": "loai-tin-tucs",
+    "displayName": "LoaiTinTuc",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "tin_tuc_cong_ties": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tin-tuc-cong-ty.tin-tuc-cong-ty",
+      "mappedBy": "loai_tin_tucs"
+    }
+  }
+}
